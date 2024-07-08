@@ -4,8 +4,8 @@ import robotsTxt from "astro-robots-txt";
 
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  site: 'https://eliashania.github.io/portfolio/', // URL de tu GitHub Pages
+  site: {
+    base: 'https://eliashania.github.io/portfolio/', // Reemplaza con la URL de tu GitHub Pages
+  },
   output: 'static', // Asegúrate de que la salida sea estática
 });
-
-
