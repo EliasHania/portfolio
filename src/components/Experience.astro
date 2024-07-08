@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Mayo 2023",
+    title: "Desarrollo Frontend",
+    company: "IAL - TransferWorld",
+    description:
+      "Enfoque en el desarrollo de una plataforma de compra-venta y alquiler de vehículos, así como en la importación automovilística. Mi labor incluye la creación de interfaces web intuitivas y responsivas para mejorar la experiencia del usuario.",
+      link: "https://ial-transferworld.com/",
+  },
+  {
+  date: "Noviembre 2022",
+  title: "Desarrollo Frontend",
+  company: "Health Excellence Clinic",
+  description: "Encargado del desarrollo y mantenimiento de la plataforma web. Diseño y creación de componentes interactivos y responsivos para mejorar la experiencia del usuario. Implementación de la web en WordPress, asegurando un diseño adaptativo que cumpla con los estándares de accesibilidad y usabilidad requeridos por nuestros clientes del sector de fisioterapia.",
+  "link": "https://www.healthexcellenceclinic.com/"
+},
+{
+    date: "Abril 2022",
+    title: "Desarrollo Frontend",
+    company: "Welcome House Appart Hotel ",
+    description:
+      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de la web. Creacion de la web en Wordpress, con un diseño responsive y adaptado a las necesidades del cliente.",
+      link: "https://welcomeh.com/",
+  },
+
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
