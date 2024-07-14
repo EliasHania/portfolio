@@ -7,8 +7,14 @@ import Code from "./icons/Code.astro"
 import Wordpress from "./icons/Wordpress.astro"
 import JavaScript from "./icons/JavaScript.astro"
 import Elementor from "./icons/Elementor.astro"
+import React from './icons/React.astro'
 
 const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
@@ -16,6 +22,11 @@ const TAGS = {
   },
   TAILWIND: {
     name: "CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  TAILWIND2: {
+    name: "Tailwind",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
@@ -41,6 +52,15 @@ const TAGS = {
   },
 }
 const PROJECTS = [
+ {
+    title: "Barbería Casanova - Peluquería en Cadíz, España",
+    description:
+      "Este sitio web fue desarrollado utilizando React, con el apoyo de Next.js, Tailwind CSS y Vite, asegurando un diseño adaptable y completamente personalizado para satisfacer las necesidades específicas del cliente.",
+    link: "https://www.barberiacasanova.com/",
+    github: "https://github.com/EliasHania",
+    image: "/projects/barberiacasanovaweb.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND2, TAGS.REACT],
+  },
   {
     title: "Welcome House Appart Hotel - Hotel en Tanger, Marruecos",
     description:
