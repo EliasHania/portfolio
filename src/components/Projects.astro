@@ -1,13 +1,13 @@
 ---
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-import Code from "./icons/Code.astro"
-import Wordpress from "./icons/Wordpress.astro"
-import JavaScript from "./icons/JavaScript.astro"
-import Elementor from "./icons/Elementor.astro"
-import React from './icons/React.astro'
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import Code from "./icons/Code.astro";
+import Wordpress from "./icons/Wordpress.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Elementor from "./icons/Elementor.astro";
+import React from "./icons/React.astro";
 
 const TAGS = {
   REACT: {
@@ -50,9 +50,19 @@ const TAGS = {
     class: "bg-[#00A0D2] text-white",
     icon: Elementor,
   },
-}
+};
 const PROJECTS = [
- {
+  {
+    title: "Acteco - Plataforma de Gestión de Palets",
+    description:
+      "Sistema completo de registro y gestión de palets mediante escaneo de códigos QR, desarrollado con React y Tailwind CSS. Incluye autenticación con roles, panel de administración, y visualización/exportación diaria de datos en tiempo real.",
+    link: "https://acteco-algeciras.netlify.app/",
+    github: "https://github.com/EliasHania/acteco-web",
+    image: "/projects/acteco.webp", // Asegúrate de que esta imagen exista en tu carpeta public
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.JavaScript],
+  },
+
+  {
     title: "Barbería Casanova - Peluquería en Cadíz, España",
     description:
       "Este sitio web fue desarrollado utilizando React, con el apoyo de Next.js, Tailwind CSS y Vite, asegurando un diseño adaptable y completamente personalizado para satisfacer las necesidades específicas del cliente.",
@@ -71,7 +81,8 @@ const PROJECTS = [
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.Wordpress, TAGS.JavaScript],
   },
   {
-    title: "Health Excellence Clinic - Clínica Fisioterapia en Tanger, Marruecos",
+    title:
+      "Health Excellence Clinic - Clínica Fisioterapia en Tanger, Marruecos",
     description:
       "Construí esta web utilizando WordPress junto con los constructores visuales Elementor y Divi, asegurando un diseño responsive y personalizado según las necesidades específicas del cliente.",
     link: "https://www.healthexcellenceclinic.com/",
@@ -86,52 +97,55 @@ const PROJECTS = [
     image: "/projects/ial.webp",
     tags: [TAGS.HTML, TAGS.TAILWIND, TAGS.Wordpress, TAGS.JavaScript],
   },
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
